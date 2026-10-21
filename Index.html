@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Presentación sobre Vue</title>
+
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        background-color: #111318;
+        margin: 0;
+    }
+    
+    header {
+        background-color:#1f724d;
+        text-align: center;
+        padding: 15px;
+        color: white;
+    }
+    
+    nav {
+        background-color: #20222d;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    footer {
+        background-color: #20222d;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        padding: 30px;
+        color: rgb(255, 255, 255);
+    }
+    
+    a {
+        color: rgb(250, 250, 250);
+        margin: 0 8px;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    section {
+        display: none;
+        background-color: #1b1d27;
+        color: #e2e4eb;
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    
+    section:target {
+        display: block;
+    }
+    
+    #inicio {
+        display: block;
+    }
+    
+    body:has(section:target) #inicio:not(:target) {
+        display: none;
+    }
+    
+    h2 {
+        color: #c084fc;
+    }
+    
+    img {
+        display: block;
+        margin: 15px auto;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    pre {
+        background-color: #0b0c10;
+        color: #ad5cfd;
+        padding: 10px;
+    }
+    </style>
+    
+</head>
+
+<body>
+
+<header>
+<h1>Presentación sobre Vue</h1>
+<p>Trabajo práctico de HTML, CSS y JavaScript</p>
+<p>Elegí una diapositiva del menú para empezar</p>
+</header>
+
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#framework">Framework</a>
+<a href="#vue">Vue</a>
+<a href="#instalar">Instalar</a>
+<a href="#crear">Crear proyecto</a>
+<a href="#estructura">Estructura</a>
+<a href="#componentes">Componentes</a>
+</nav>
+
+<section id="inicio">
+<h2>Bienvenidos</h2>
+<img src="logo.png" alt="Logo de Vue" width="300" height="200">
+<p>En esta presentación voy a hablar sobre qué es Vue, cómo instalarlo, cómo crear un proyecto y qué son los componentes.</p>
+<p>Usá el menú de arriba para cambiar de diapositiva.</p>
+</section>
+
+<section id="framework">
+<h2>¿Qué es un framework?</h2>
+<img src="frame.png" alt="Esquema de un framework" width="400" height="220">
+<p>Un framework es una estructura de trabajo que contiene herramientas, funciones y reglas que ayudan a crear aplicaciones de forma más rápida y organizada, Como por ejemplo Java Script.</p>
+<ul>
+<li>Permite reutilizar código y Puedes integrarlo poco a poco en proyectos que ya existen.</li>
+<li>Tiene un sistema de componentes ordenados que permite dividir la interfaz en piezas pequeñas, independientes y reutilizables.</li>
+<li>Los datos de la aplicación se sincronizan de forma automática con lo que ve el usuario en la pantalla.</li>
+</ul>
+</section>
+
+<section id="vue">
+<h2>¿Qué es Vue?</h2>
+<img src="logo.png" alt="Logo de Vue" width="200" height="200">
+<p>Vue es un framework progresivo de JavaScript utilizado para crear interfaces de usuario y aplicaciones web de forma sencilla, rápida y flexible.</p>
+<ul>
+<li><b>Componentes:</b> divide la página en partes reutilizables que te permite organizar el codigo.</li>
+<li><b>Reactividad:</b> si cambia un dato, la pantalla se actualiza sola(mantiene sincronizado lo que el usuario ve en pantalla con los datos de la aplicacion).</li>
+<li><b>Gran rendimiento:</b> permite crear interfaces rápidas y eficientes.</li>
+</ul>
+</section>
+
+
+<section id="instalar">
+<h2>Instalar Node.js y Vue</h2>
+<img src="insta.jpeg" alt="Logo de Node.js" width="300" height="200">
+<p><b>1. Instalar Node.js:</b> entrar a <b>nodejs.org</b> y descargar el programa. Este también instala npm, que sirve para instalar herramientas y paquetes.</p>
+<p><b>2. Comprobar la instalación:</b> abrir la terminal y escribir estos comandos:</p>
+<pre><code>node -v
+npm -v</code></pre>
+<p>Si aparecen números de versión, significa que están instalados correctamente.</p>
+<p><b>3. Instalar Vue:</b> Vue se puede agregar a un proyecto existente escribiendo este comando en la terminal:</p>
+<pre><code>npm install vue</code></pre>
+<p>¡Listo! Ya tenés los pasos básicos para empezar a trabajar con Vue.</p>
+    </section>    
+
+<section id="crear">
+<h2>Crear y ejecutar un proyecto</h2>
+<img src="crear.jpeg" alt="Captura de la terminal" width="460" height="200">
+<p>1. Crear el proyecto:</p>
+<pre><code>npm create vue@latest</code></pre>
+<p>2. Entrar a la carpeta:</p>
+<pre><code>cd nombre-del-proyecto</code></pre>
+<p>3. Instalar las dependencias:</p>
+<pre><code>npm install</code></pre>
+<p>4. Ejecutar el proyecto:</p>
+<pre><code>npm run dev</code></pre>
+</section>
+
+<section id="estructura">
+<h2>¿Cómo funciona Vue?</h2>
+<img src="code.jpeg" alt="Código de Vue" width="380" height="260">
+<p>Vue permite crear páginas web que reaccionan a los cambios que hace el usuario.</p>
+<ul>
+<li><b>Datos:</b> contienen la información que muestra la página.</li>
+<li><b>Interfaz:</b> es la parte de la página que ve el usuario.</li>
+<li><b>Actualización automática:</b> si cambia un dato, Vue actualiza la pantalla sin tener que recargar toda la página.</li>
+<li><b>Interacción:</b> permite que la página responda a acciones como hacer clic en un botón o escribir en un campo.</li>
+</ul>
+</section>
+
+
+<section id="componentes">
+<h2>Componentes</h2>
+<img src="compo.png" alt="Esquema de componentes" width="400" height="260">
+<p>Los componentes son partes de una página web que sirven para organizar mejor el contenido y reutilizarlo.</p>
+<ul>
+<li><b>Encabezado:</b> muestra el título de la página.</li>
+<li><b>Menú:</b> permite ir a las distintas secciones.</li>
+<li><b>Contenido:</b> muestra la información principal.</li>
+<li><b>Pie de página:</b> muestra información al final de la página.</li>
+</ul>
+<p>En Vue, cada una de estas partes se puede crear por separado y después unirlas para formar una página completa.</p>
+</section>
+    
+
+<footer>
+<p>Trabajo Practico Sobre Vue-Emiliano Pigozzi</p>
+</footer>
+
+</body>
+</html>
