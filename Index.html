@@ -13,34 +13,29 @@
         background-color: #111318;
         margin: 0;
     }
-    
+
     header {
-        background-color:#1f724d;
+        background-color: #1f724d;
         text-align: center;
         padding: 15px;
         color: white;
     }
-    
+
     nav {
         background-color: #20222d;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
         padding: 15px;
     }
-    
-    footer {
-        background-color: #20222d;
-        font-family: 'Poppins', sans-serif;
-        text-align: center;
-        padding: 30px;
-        color: rgb(255, 255, 255);
-    }
-    
-    a {
-        color: rgb(250, 250, 250);
+
+    nav a {
+        color: white;
         margin: 0 8px;
-        font-family: 'Poppins', sans-serif;
+        font-family: Poppins, sans-serif;
     }
-    
+
     section {
         display: none;
         background-color: #1b1d27;
@@ -49,37 +44,46 @@
         margin: 20px auto;
         padding: 20px;
     }
-    
+
     section:target {
         display: block;
     }
-    
+
     #inicio {
         display: block;
     }
-    
+
     body:has(section:target) #inicio:not(:target) {
         display: none;
     }
-    
+
     h2 {
         color: #c084fc;
     }
-    
+
     img {
         display: block;
         margin: 15px auto;
         max-width: 100%;
         height: auto;
     }
-    
+
     pre {
         background-color: #0b0c10;
         color: #ad5cfd;
         padding: 10px;
+        overflow-x: auto;
     }
-    </style>
-    
+
+    footer {
+        background-color: #20222d;
+        font-family: Poppins, sans-serif;
+        text-align: center;
+        padding: 30px;
+        color: white;
+    }
+</style>
+
 </head>
 
 <body>
@@ -129,7 +133,6 @@
 </ul>
 </section>
 
-
 <section id="instalar">
 <h2>Instalar Node.js y Vue</h2>
 <img src="insta.jpeg" alt="Logo de Node.js" width="300" height="200">
@@ -140,8 +143,8 @@ npm -v</code></pre>
 <p>Si aparecen números de versión, significa que están instalados correctamente.</p>
 <p><b>3. Instalar Vue:</b> Vue se puede agregar a un proyecto existente escribiendo este comando en la terminal:</p>
 <pre><code>npm install vue</code></pre>
-<p>¡Listo! Ya tenés los pasos básicos para empezar a trabajar con Vue.</p>
-    </section>    
+<p>Listo, Ya tenés los pasos básicos para empezar a trabajar con Vue.</p>
+</section>
 
 <section id="crear">
 <h2>Crear y ejecutar un proyecto</h2>
@@ -168,7 +171,6 @@ npm -v</code></pre>
 </ul>
 </section>
 
-
 <section id="componentes">
 <h2>Componentes</h2>
 <img src="compo.png" alt="Esquema de componentes" width="400" height="260">
@@ -181,7 +183,6 @@ npm -v</code></pre>
 </ul>
 <p>En Vue, cada una de estas partes se puede crear por separado y después unirlas para formar una página completa.</p>
 </section>
-    
 
 <footer>
 <p>Trabajo Practico Sobre Vue-Emiliano Pigozzi</p>
