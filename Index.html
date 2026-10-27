@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Presentación sobre Vue</title>
+
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        background-color: #111318;
+        margin: 0;
+    }
+
+    header {
+        background-color: #1f724d;
+        text-align: center;
+        padding: 15px;
+        color: white;
+    }
+
+    nav {
+        background-color: #20222d;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav a {
+        color: white;
+        margin: 0 8px;
+        font-family: Poppins, sans-serif;
+    }
+
+    section {
+        display: none;
+        background-color: #1b1d27;
+        color: #e2e4eb;
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    section:target {
+        display: block;
+    }
+
+    #inicio {
+        display: block;
+    }
+
+    body:has(section:target) #inicio:not(:target) {
+        display: none;
+    }
+
+    h2 {
+        color: #c084fc;
+    }
+
+    img {
+        display: block;
+        margin: 15px auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    button {
+        background-color: #1f724d;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background-color: #299663;
+    }
+
+    #texto {
+        color: #e2e4eb;
+        font-weight: normal;
+    }
+
+    footer {
+        background-color: #20222d;
+        font-family: Poppins, sans-serif;
+        text-align: center;
+        padding: 30px;
+        color: white;
+    }
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Presentación sobre Vue</h1>
+<p>Trabajo práctico de HTML, CSS y JavaScript</p>
+<p>Elegí una diapositiva del menú para empezar</p>
+</header>
+
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#framework">Framework</a>
+<a href="#vue">Vue</a>
+<a href="#instalar">Instalar</a>
+<a href="#crear">Crear proyecto</a>
+<a href="#estructura">Estructura</a>
+<a href="#componentes">Componentes</a>
+</nav>
+
+<section id="inicio">
+<h2>Bienvenidos</h2>
+<img src="logo.png" alt="Logo de Vue" width="300" height="200">
+<p>En esta presentación voy a hablar sobre qué es Vue, cómo instalarlo, cómo crear un proyecto y qué son los componentes.</p>
+<p>Usá el menú de arriba para cambiar de diapositiva.</p>
+</section>
+
+<section id="framework">
+<h2>¿Qué es un framework?</h2>
+<img src="frame.png" alt="Esquema de un framework" width="400" height="220">
+<p>Un framework es una estructura de trabajo que contiene herramientas, funciones y reglas que ayudan a crear aplicaciones de forma más rápida y organizada, como por ejemplo JavaScript.</p>
+<ul>
+<li>Permite reutilizar código y se puede integrar poco a poco en proyectos existentes.</li>
+<li>Organiza la interfaz en partes pequeñas, independientes y reutilizables.</li>
+<li>Permite sincronizar los datos de la aplicación con lo que ve el usuario.</li>
+</ul>
+</section>
+
+<section id="vue">
+<h2>¿Qué es Vue?</h2>
+<img src="logo.png" alt="Logo de Vue" width="200" height="200">
+<p>Vue es un framework progresivo de JavaScript utilizado para crear interfaces de usuario y aplicaciones web de forma sencilla, rápida y flexible.</p>
+<ul>
+<li><b>Componentes:</b> divide la página en partes reutilizables que permiten organizar el código.</li>
+<li><b>Reactividad:</b> si cambia un dato, la pantalla se actualiza sola.</li>
+<li><b>Gran rendimiento:</b> permite crear interfaces rápidas y eficientes.</li>
+</ul>
+
+<button onclick="mensaje()">Ver información</button>
+<p id="texto"></p>
+</section>
+
+<section id="instalar">
+<h2>Instalar Node.js y Vue</h2>
+<img src="insta.jpeg" alt="Logo de Node.js" width="300" height="200">
+<p><b>1. Instalar Node.js:</b> entrar a <b>nodejs.org</b> y descargar el programa. También instala npm, que sirve para instalar herramientas y paquetes.</p>
+<p><b>2. Comprobar la instalación:</b> abrir la terminal y escribir:</p>
+<ul>
+<li><b>node -v:</b> muestra la versión de Node.js.</li>
+<li><b>npm -v:</b> muestra la versión de npm.</li>
+</ul>
+<p>Si aparecen números de versión, significa que están instalados correctamente.</p>
+<p><b>3. Instalar Vue:</b> abrir la terminal dentro del proyecto y escribir:</p>
+<ul>
+<li><b>npm install vue:</b> instala Vue en el proyecto.</li>
+</ul>
+<p>Listo, ya tenés los pasos básicos para empezar a trabajar con Vue.</p>
+</section>
+
+<section id="crear">
+<h2>Crear y ejecutar un proyecto</h2>
+<img src="crear.jpeg" alt="Captura de la terminal" width="460" height="200">
+<p>Para crear y ejecutar un proyecto de Vue, seguí estos pasos:</p>
+<ul>
+<li><b>Crear el proyecto:</b> escribir <b>npm create vue@latest</b> en la terminal.</li>
+<li><b>Entrar a la carpeta:</b> usar <b>cd nombre-del-proyecto</b>.</li>
+<li><b>Instalar las dependencias:</b> escribir <b>npm install</b>.</li>
+<li><b>Ejecutar el proyecto:</b> escribir <b>npm run dev</b>.</li>
+</ul>
+<p>Después de ejecutar el último comando, la terminal muestra la dirección local para abrir el proyecto en el navegador.</p>
+</section>
+
+<section id="estructura">
+<h2>¿Cómo funciona Vue?</h2>
+<img src="code.jpeg" alt="Código de Vue" width="380" height="260">
+<p>Vue permite crear páginas web que reaccionan a los cambios que hace el usuario.</p>
+<ul>
+<li><b>Datos:</b> contienen la información que muestra la página.</li>
+<li><b>Interfaz:</b> es la parte de la página que ve el usuario.</li>
+<li><b>Actualización automática:</b> si cambia un dato, Vue actualiza la pantalla sin recargar toda la página.</li>
+<li><b>Interacción:</b> permite que la página responda a acciones como hacer clic en un botón o escribir en un campo.</li>
+</ul>
+</section>
+
+<section id="componentes">
+<h2>Componentes</h2>
+<img src="compo.png" alt="Esquema de componentes" width="400" height="260">
+<p>Los componentes son partes de una página web que sirven para organizar mejor el contenido y reutilizarlo.</p>
+<ul>
+<li><b>Encabezado:</b> muestra el título de la página.</li>
+<li><b>Menú:</b> permite ir a las distintas secciones.</li>
+<li><b>Contenido:</b> muestra la información principal.</li>
+<li><b>Pie de página:</b> muestra información al final de la página.</li>
+</ul>
+<p>En Vue, cada una de estas partes se puede crear por separado y después unirlas para formar una página completa.</p>
+</section>
+
+<footer>
+<p>Trabajo Práctico sobre Vue - Emiliano Pigozzi</p>
+</footer>
+
+<script>
+function mensaje() {
+    document.getElementById("texto").innerHTML =
+    "Vue es un framework de JavaScript creado para desarrollar interfaces web.";
+}
+</script>
+
+</body>
+</html>
